@@ -1,91 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My cool page</title>
-        <link rel="stylesheet" href="mycss/style.css" > 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/bf9109e24e.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first landing page</title>
+    <link rel="stylesheet" href="mycss/style.css">
+    <script src="https://kit.fontawesome.com/6d77e233f3.js" crossorigin="anonymous"></script>
 
-        <header>
-            <section>
-                <img width="50" src="https://tinyurl.com/figma-image" alt="Figma icon" >
-                <a href="#oscar"><i class="fab fa-twitter manish"></i>  Product</a>
-            </section>
-            <p>Hello Lucas, changes!</p>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20 20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9zm-9-7v6h2v-6h-2z"/></svg>
-            <nav>
-                <a>😅 Design</a>
-                <a> 🤩 Plugins</a>
-                <a>Text</a>
-            </nav>
-        </header>
-
-
-        <!-- Headings   -->
-        <h1>Hello Ironhackers</h1>
-        <h6>Smaller heading</h6>
-
-        <!-- Block elements -->
-        <p>Some text here</p>
-        <p class="subtitle" id="manish" >Some more text here</p>
-
-        <!-- Inline elements -->
-        <span id="msg" >Hey there</span>
-        <span>How are you ?</span>
-
-        <!-- Block elements -->
-        <h3 >Div tags</h3>
-
-        <div>Hey there</div>
-        <!-- AVOID INLINE STYLES AT ALL COSTS -->
-        <div style="color: blue; font-size:20px" >How are you ?</div>
-
-        <ul>
-            <li>Get food</li>
-            <li>Get food 1</li>
-            <li>Get food 2</li>
-        </ul>
-
-        <ol>
-            <li>Get food</li>
-            <li>Get food 1</li>
-            <li>Get food 2</li>
-        </ol>
-
-        <!-- Semantic element to create nav bars -->
-        
+</head>
+<body>
+    <!-- Part 1: Header -->
+    <header>
+        <img class="figma-icon" src="https://tinyurl.com/figma-image" >
         <nav>
-            <a href="https://www.google.com">Visit Google</a>
-            <a href="https://www.ironhack.com" target="__blank" >Visit Ironhack</a>
+            <a href="#product">Product</a>
+            <a href="#platform">Platform</a>
+            <a href="#design">Design</a>
+            <a href="#community">Community</a>
+            <button>Sign Up</button>
         </nav>
+    </header>
 
-        <!-- Nesting elements -->
-        <button > 
-            <a href="https://www.ironhack.com" target="__blank" >Visit Ironhack
-            </a>
-        </button>
+    <!-- Part 2 -->
+    <main>
 
-        <a href="https://www.ironhack.com" target="__blank" >
-            <button >Visit Ironhack</button>
-        </a>
-
-        <h1 id="oscar">Product</h1>
-        <!-- Using sections -->
-        <section>
-            <img width="50" src="https://tinyurl.com/figma-image" alt="Figma icon" >
+        <!-- Part 2.1: Main Video -->
+        <section class="container">
+            <video class="figma-video" autoplay muted>
+                <source src="https://tinyurl.com/figma-main-video" type="video/mp4">
+            </video>
+            <p class="subtitle" >Figma connects everyone in the design process so teams can deliver better products, faster</p>
+            <button>Try Figma for free</button>
         </section>
-        
-        <!-- Showing videos -->
-        <video width="500" controls autoplay loop>
-            <source src="https://tinyurl.com/figma-main-video" type="video/mp4">
-        </video>
-        <video width="500"  autoplay loop>
-            <source src="https://tinyurl.com/figma-middle-1" type="video/mp4">
-        </video>
-    </body>
+
+
+        <!-- Part 2.2: Design for the web -->
+        <section id="design" class="middle">
+            <video autoplay muted loop >
+                <source src="https://tinyurl.com/figma-middle-1" type="video/mp4">
+            </video>
+            <section>
+                <h2 >Design for the web made easy</h2>
+                <p class="subtitle" >Figma was built for the future of web. That’s why you’ll see features you won’t find elsewhere.</p>
+                <ul class="subtitle" >
+                    <li><b>A modern pen tool:</b>Draw in any direction with Vector Networks. No more merging or needing to connect to the path's original point.</li>
+                    <li><b>Instant arc designs:</b> Design clocks, watch screens, or pie charts easily with the Arc tool.</li>
+                    <li><b>Be expressive with OpenType: </b> ap into advanced font features to fully express your brand</li>
+                </ul>   
+            </section>
+        </section>
+
+
+        <!-- Part 2.3: Yellow section -->
+        <section id="platform" class="yellow">
+            <div >
+                <h1 >A design platform for scale</h2>
+                <p class="subtitle">Great design has the potential to differentiate your product and brand. But great design can’t happen in a silo. Figma brings product teams together for a faster and inclusive design workflow.</p>
+                <button>Request a demo</button>
+            </div>
+            <video autoplay muted loop >
+                <source src="https://tinyurl.com/figma-org" type="video/mp4">
+            </video>
+        </section>
+
+
+        <!-- Part 2.4: Plugins section -->
+        <section class="middle" id="product">
+            <video autoplay muted loop >
+                <source src="https://tinyurl.com/figma-middle-2" type="video/mp4">
+            </video>
+            <section>
+                <h2 >Automate and augment your work with Plugins</h2>
+                <p class="subtitle">Remove repetitive tasks, bring in data, and power custom workflows.</p>
+                <ul class="subtitle">
+                    <li><b>Plugins for everything:</b> Stock imagery, flow diagrams, color accessibility, charts, icons, and more.</li>
+                    <li><b>Easy development:</b> If you can build a website, you can build a plugin.</li>
+                    <li><b>Private plugins:</b> Organization customers can create and distribute private plugins within their company.</li>
+                </ul>
+            </section>
+        </section>   
+
+
+        <!-- Part 2.5: Community-->
+        <section id="community" class="community">
+            <h2>Join the community</h2>
+            <p>Learn from others, share your work, and extend your tool set with a diverse group of designers, plugin creators, researchers, illustrators, content writers, and many more from around the world.</p>
+            <section>
+                <img src="https://tinyurl.com/fig-community-1" >
+                <img src="https://tinyurl.com/fig-community-2" >
+                <img src="https://tinyurl.com/fig-community-3" >
+            </section>
+            <button>Browse Figma Community</button>
+        </section>
+
+
+        <!-- Part 2.6: Sign Up Form -->
+        <section class="contact">
+            <h1>Try Figma for free.</h1>
+            <button>Continue with Google</button>
+            <p>or</p>
+            <form>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Create Account</button>
+            </form>
+        </section>
+    </main>
+
+
+    <!-- Part 3: Footer-->
+    <footer>
+        <section class="column">
+            <img src="https://tinyurl.com/figma-svg" alt="Figma title logo">
+            <p><i class="fab fa-twitter"> Twitter </i></p>
+            <p><i class="fab fa-youtube"> YouTube </i></p>
+            <p><i class="fab fa-instagram"> Instagram </i></p>
+            <p><i class="fab fa-facebook-square"> Facebook </i></p> 
+            <p>Manage Cookies</p>
+        </section>
+        <section class="column">
+            <p><b>Use Cases</b></p>
+            <p>UI design</p>
+            <p>UX design</p>
+            <p>Graphic design</p>
+        </section>
+        <section class="column">
+            <p><b>Explore</b></p>
+            <p>Dummy text</p>
+            <p>Dummy text</p>
+            <p>Dummy text</p>
+        </section>
+        <section class="column">
+            <p><b>Resources</b></p>
+            <p>Dummy text</p>
+            <p>Dummy text</p>
+            <p>Dummy text</p>
+        </section>
+        <section class="column">
+            <p><b>Compare</b></p>
+            <p>Dummy text</p>
+            <p>Dummy text</p>
+            <p>Dummy text</p>
+        </section>
+ </footer>
+</body>
 </html>

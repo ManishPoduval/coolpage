@@ -1,119 +1,263 @@
- /* Comments */
-/* cmd + shift + /  OR ctrl + / */
-
- /* Element selectors */
-/* targets all the matching elements */
-
- h1 {
-    color:purple;
-    text-decoration: underline;
- }
-
- p {
-     font-size: 20px;
-     font-weight: 700;
- }
-
-/* Class selectors */
-
-.subtitle {
-    color: skyblue;
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth; 
 }
 
-/*  ID selectors */
-#msg {
-    color: green
-}
-
-#manish {
-    color: brown
-}
-
-
-/* Pseudo Selectors */
-
-h3:hover {
-    text-decoration: underline;
-    color: red;
-}
-
-h3:focus {
-    text-decoration: underline;
-    color: red;
-}
-
-h3:visited {
-    text-decoration: underline;
-    color: red;
-}
-
-p {
-    width: 50%;
-    color: yellow;
-    background-color: tomato;
-
-    /* padding-left: 5px;
-    padding-right: 2px;
-    padding-top: 10px;
-    padding-bottom: 30px; */
-
-    padding: 10px 2px 30px 5px;
-    /* paddting to the Top Right Bottom Left */
-
-    /* padding: 20px 5px; */
-    /* 20px to the top and bottom, 5px to left and right */
-
-
-    margin: 30px;
-
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-
-button {
-    color: white;
-    background-color: black;
-    border: 0;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-}
-
-
-
-
-
-
- /* Universal selectors */
-
- /* * {
-     color: red;
- } */
-
-
- html, body  {
-     margin: 0;
-     padding: 0;
-     /* font-family: 'Cedarville Cursive', cursive; */
-     /* font-family: 'Grey Qo', cursive; */
-     font-family: sans-serif;
-     scroll-behavior: smooth;
- }
-
-
-
-
+/* Part 1: Header */
 
 header {
-    margin: 50px;
+    margin: 20px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
+.figma-icon {
+    margin-left: 20px;
+    width: 40px;
+}
 
-.manish {
-    font-size: 30px;
-    color: blue;
+/* Targetting all buttons in the entire page */
+button {
+    background: black;
+    color: white;
+    border-radius: 10px;
+    padding: 14px 24px 16px;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0px;
+    cursor: pointer;
+    box-shadow: 10px 20px 20px grey;
+    transition-duration: 2s;
+}
+
+button:hover {
+    box-shadow: 10px 20px 20px rgb(97, 96, 96);
+    /* transform: rotate(15deg); */
+    /* transform: scale(1.1); */
+    /* transform: skew(15deg); */
+    transform: translateY(-20px);
+}
+
+
+
+
+
+.figma-video {
+    animation-name: manish;
+    animation-duration: 4s;
+    /* animation-iteration-count: infinite; */
+}
+
+@keyframes manish {
+    from {
+       margin-right: 900px;
+       margin-top: 500px; 
+    }
+    to {
+        margin-right: 10px; 
+        margin-top: 0px; 
+    }
+}
+
+
+
+/* Targetting only the <a> elements within a <nav> element */
+nav a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 8px 16px;
+    color: rgb(0, 0, 0);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    
+}
+
+
+/* Part 2.1: Main Video */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+.figma-video {
+    height: 350px;
+}
+
+/* This is a common class used in a lot of elements */
+.subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 500px;
+}
+
+
+/* Part 2.2: Design for the web */
+/*            &&                */
+/*   Part 2.4: Plugins section  */
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle video {
+    width: 550px;
+}
+
+.middle h2 { 
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 32px;
+}
+
+/* Part 2.3: Yellow section */
+
+.yellow {
+    margin-top: 100px;
+    background-color: #ffc700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Targets a <div> within an element with class="yellow" */
+.yellow div {
+    max-width: 550px;
+}
+
+.yellow h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 32px;
+}
+
+.yellow video {
+    width: 550px;
+}
+
+
+/* Part 2.5: Community */
+.community {
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.community h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.community p {
+    max-width: 800px;
+    text-align: center;
+}
+
+
+.community img {
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 20px;
+    max-width: 400px;
+}  
+
+.community button {
+    background-color: white;
+    color: black;
+    margin: 50px;
+}
+
+
+/* Part 2.6: Sign Up Form */
+
+.contact {
+    margin: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact input {
+    margin: 10px;
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 50px;
+    line-height: normal;
+    color: #282828;
+    display: block;
+    width: 400px;
+    padding-left: 12px;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Part 3: Footer */
+
+footer {
+    background: #FAFAFA;
+    display: flex;
+    justify-content: center;
+}
+
+footer .column {
+    margin: 50px;
+}
+
+@media (max-width: 320px) {
+
+    html, body {
+        padding: 20px;
+    }
+
+    video {
+        width: 100px;
+    }
+
+    p {
+        font-weight: 700;
+    }
+    
+    button {
+        color: red;
+        font-size: 28px;
+    }
+
+    .middle {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+}
+
+@media (min-width: 1000px) {
+    
 }
